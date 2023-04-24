@@ -24,7 +24,7 @@ public class DashboardFragment extends Fragment {
 
         binding.openAbout.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(binding.getRoot());
-            navController.navigate(DashboardFragmentDirections.dashboardToAbout("1234"));
+            navController.navigate(DashboardFragmentDirections.dashboardToAbout("link.com"));
         });
 
         return binding.getRoot();

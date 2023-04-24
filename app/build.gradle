@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.roomapp'
+    namespace 'com.example.navigationapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.roomapp"
+        applicationId "com.example.navigationapp"
         minSdk 24
         targetSdk 33
         versionCode 1
