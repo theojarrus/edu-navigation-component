@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboard">
+
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.navigationapp.AboutFragment"
+        android:label="About Label"
+        tools:layout="@layout/fragment_about">
+        <argument
+            android:name="link"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.navigationapp.DashboardFragment"
+        android:label="Dashboard Label"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/dashboard_to_about"
+            app:destination="@id/about"
+            app:enterAnim="@animator/nav_default_enter_anim"
+            app:exitAnim="@animator/nav_default_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+            app:popExitAnim="@animator/nav_default_pop_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.navigationapp.ProfileFragment"
+        android:label="Profile Label"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>
